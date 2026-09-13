@@ -1,16 +1,103 @@
-# React + Vite
+# PrepSync 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Prepare smarter. Track your progress. Get placement-ready.**
 
-Currently, two official plugins are available:
+PrepSync is a personalized placement preparation platform designed to help students organize their learning, assess their skills, and consistently work toward their career goals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎯 Problem
 
-## React Compiler
+Placement preparation can become difficult to manage when learning resources, practice, assessments, schedules, and progress are scattered across different platforms.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Students often struggle to answer:
 
-## Expanding the ESLint configuration
+* What should I learn next?
+* How much of my preparation is actually complete?
+* Which concepts are my strengths and weaknesses?
+* Am I consistently preparing every day?
+* Am I ready for the final assessment?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💡 Solution
+
+PrepSync brings these aspects of placement preparation into one platform.
+
+Users can set a career goal, follow a structured roadmap, create daily and weekly preparation plans, take concept-based assessments, monitor their progress, and evaluate their overall readiness.
+
+## ✨ Features
+
+* 🔐 User registration and login
+* 🎯 Career goal setting
+* 🗺️ Structured learning roadmaps
+* 📚 Concept-based learning
+* 📝 Topic-wise assessments
+* 📊 Performance and progress tracking
+* 💪 Strength and weakness analysis
+* 📅 Daily and weekly preparation plans
+* 🔥 Preparation streaks
+* 🏆 Badges and achievements
+* 🧪 Final comprehensive assessment
+* 📜 Certificate on completion
+
+### Future Features
+
+* 👥 Peer preparation groups
+* 🎤 Mock interviews
+* 💻 Coding contests
+* 📄 Resume analysis
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* Vite
+* HTML
+* CSS
+* JavaScript
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB
+
+### Other Tools
+
+* Git
+* GitHub
+
+## 🏗️ Project Status
+
+🚧 **Currently in development**
+
+The project is being developed incrementally, starting with the frontend and gradually integrating the backend, database, authentication, assessments, and progress-tracking features.
+
+## 📁 Project Structure
+
+```text
+PrepSync/
+│
+├── frontend/
+│
+├── backend/
+│
+└── README.md
+```
+
+> The project structure will evolve as development progresses.
+
+## 🎯 Project Goal
+
+The goal of PrepSync is to build a practical, deployable placement-preparation platform that helps students prepare consistently while giving them a clear picture of their progress and readiness.
+
+## 👩‍💻 Author
+
+**Sri Vardhini**
+
+Student | MERN Stack Developer
+
+---
+
+⭐ This project is being built as a learning and portfolio project while exploring full-stack web development with the MERN stack.
