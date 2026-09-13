@@ -74,18 +74,6 @@ Users can set a career goal, follow a structured roadmap, create daily and weekl
 
 The project is being developed incrementally, starting with the frontend and gradually integrating the backend, database, authentication, assessments, and progress-tracking features.
 
-## 📁 Project Structure
-
-```text
-PrepSync/
-│
-├── frontend/
-│
-├── backend/
-│
-└── README.md
-```
-
 > The project structure will evolve as development progresses.
 
 ## 🎯 Project Goal
