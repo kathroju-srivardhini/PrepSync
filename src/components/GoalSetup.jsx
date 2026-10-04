@@ -1,16 +1,11 @@
 import {useState} from "react";
 import careerPaths from "../Data/CareerPaths.js";
-function GoalSetup(){
+function GoalSetup({selectedCareer,setSelectedCareer,currentLevel,setCurrentLevel,setCurrentPage,selectedCareerData}){
     const[isOpen,setIsOpen]=useState(false);
     const[step,setStep]=useState(1);
     const[selectedPath,setSelectedPath]=useState("");
     const[careerInfo,setCareerInfo]=useState(null);
-    const[selectedCareer,setSelectedCareer]=useState("");
     const[showLevelSelection,setShowLevelSelection]=useState(false);
-    const[currentLevel,setCurrentLevel]=useState("");
-    const selectedCareerData=careerPaths.find(
-                   (career)=>career.role===selectedCareer
-    );
     return(
         <>
         <div className="goal-button">
@@ -46,7 +41,14 @@ Learn a programming language or technology. </li>
             </ul>
             <button 
             disabled={selectedPath===""}
-            onClick={()=>setStep(2)
+            onClick={()=>{
+                if(selectedPath==="career"){
+                    setStep(2);
+                }
+                else if(selectedPath==="technology"){
+                    setStep(6);
+                }
+            }
             }>Next</button>
             </>
         )}
@@ -252,7 +254,6 @@ Learn a programming language or technology. </li>
         
         {step===3 &&(
             <div>
-                <h2>Your Roadmap</h2>
                 <h4>Career: </h4>
                 <span>{selectedCareer}</span>
                 <h4>Current Level: </h4>
@@ -310,62 +311,13 @@ Learn a programming language or technology. </li>
             {currentLevel === "fundamentals" && "I know the fundamentals"}
             {currentLevel === "projects" && "I have built projects"}
         </p>
-            <button onClick={()=>setStep(5)}>Start Roadmap</button>
+            <button onClick={()=>setCurrentPage("roadmap")}>Start Roadmap</button>
             </>
         )}
         <button onClick={()=>setIsOpen(false)}>Close</button>
         </div>
         </div>
         }
-        
-        {step===5 && (
-            <div>
-                <h4>Career: {selectedCareer}</h4>
-            <h3>Current Level</h3>
-        <p>
-            {currentLevel === "starting" && "Starting from scratch"}
-            {currentLevel === "fundamentals" && "I know the fundamentals"}
-            {currentLevel === "projects" && "I have built projects"}
-        </p>
-        <p>
-    Current Stage:{" "}
-    {currentLevel === "starting" && "Foundation"}
-    {currentLevel === "fundamentals" && "Core"}
-    {currentLevel === "projects" && "Specialization"}
-</p>
-        <h3>Roadmap</h3>
-        {currentLevel==="starting" && (
-                    <>
-                    <h4>Foundation</h4>
-                    <ul>
-                        {selectedCareerData.learningPath.foundation.map((item)=>
-                        <li key={item}>{item}</li>
-                        )}
-                    </ul>
-                    </>
-                )}
-                {currentLevel==="fundamentals" && (
-                    <>
-                    <h4>Core</h4>
-                    <ul>
-                        {selectedCareerData.learningPath.core.map((item)=>(
-                            <li key={item}>{item}</li>
-                        ))}
-                    </ul>
-                    </>
-                )}
-                {currentLevel==="projects" && (
-                    <>
-                    <h4>Specialization</h4>
-                    <ul>
-                        {selectedCareerData.learningPath.specialization.map((item)=>(
-                            <li key={item}>{item}</li>
-                        ))}
-                    </ul>
-                    </>
-                )}
-            </div>
-        )}
         </>
     );
 }
